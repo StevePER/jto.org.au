@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joint Therapy Outreach</title>
+    <link rel="stylesheet" type="text/css" href="jto.css" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <meta name="description" content="Providing health and therapy services to people with disabilities and health challenges in impoverished circumstances" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDSK88vc9vAJajS_tDac61ht6RzjBdaysk&amp;sensor=false"></script>
+    <script type="text/javascript"
+      src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/src/markerwithlabel.js"></script>
+    <script type="text/javascript">
+      function initialize() {
+        var vanuatuLatLng = new google.maps.LatLng(-17.75, 168.3);
+
+        var mapOptionsOverview = {
+          center: new google.maps.LatLng(-18, 150.644),
+          zoom: 2,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          streetViewControl: false
+        };
+        var mapOptionsDetail = {
+          center: vanuatuLatLng,
+          zoom: 5,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          streetViewControl: false
+        };
+
+        var map1 = new google.maps.Map(document.getElementById("map_overview"),
+            mapOptionsOverview);
+        var map2 = new google.maps.Map(document.getElementById("map_detail"),
+            mapOptionsDetail);
+
+        var vanuatuMarker = new MarkerWithLabel({
+             position: vanuatuLatLng,
+             map: map1,
+             labelContent: "Vanuatu",
+             labelClass: "mapLabel",
+             clickable: false
+             });
+
+        var santoMarker = new MarkerWithLabel({
+             position: new google.maps.LatLng(-15.3405, 166.9235),
+             map: map2,
+             labelContent: "Santo (2010/11/12/13/14)",
+             labelClass: "mapLabel",
+             clickable: false
+             });
+
+        var tannaMarker = new MarkerWithLabel({
+             position: new google.maps.LatLng(-19.5148, 169.3569),
+             map: map2,
+             labelContent: "Tanna (2013/14)",
+             labelClass: "mapLabel",
+             clickable: false
+             });
+      }
+    </script>
+
+  </head>
+  <body onload="initialize()">
+    <div class="wrapper">
+
+    <div class="toptitle">
+      <h1>Joint Therapy Outreach Inc.</h1>
+    </div>
+    <div class="topright">
+      <div class="toplogo">
+        <img src="logo.png" alt="JTO Logo" width="170" height="162" />
+      </div>
+      <div class="toptext">
+        <h2>Providing health and therapy support/services to people with
+        disabilities and health challenges in impoverished circumstances</h2>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="menu">
+      <p>
+      <a class="menuselected" href="index.html">Home</a>
+      <a class="menu" href="about.html">About Us</a>
+      <a class="menu" href="directors.html">Directors</a>
+      <a class="menu" href="volunteer.html">Volunteer</a>
+      <a class="menu" href="donate.html">Donate</a>
+      <a class="menu" href="getinvolved.html">Get Involved</a>
+      <a class="menu" href="gallery.html">Photo Gallery</a>
+      <a class="menu" href="contact.html">Contact Us</a>
+      </p>
+    </div>
+    <div class="main">
+
+      <div id="slideshow">
+        <div><img src="slideshow/9.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/7.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/8.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/1.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/2.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/3.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/4.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/5.jpg" alt="Vanuatu" /></div>
+        <div><img src="slideshow/6.jpg" alt="Vanuatu" /></div>
+      </div>
+
+      <p>Joint Therapy Outreach Inc. is an Australian based not for profit
+      Christian charity.</p>
+
+      <p>Our aim is to make a difference to the lives of people in less
+      resourced communities who have disabilities and chronic health issues. To
+      achieve our aim we provide equipment, hands-on therapy and medical care
+      to meet immediate needs, and offer training to carers. We work with local
+      groups to enable development of skills and ongoing provision of
+      services.</p>
+
+      <p>Our focus to date has been the island nation of Vanuatu, located off
+      the East coast of Australia in the South Pacific. A team of professionals
+      has visited the island of Espiritu Santo in 2010, 2011, 2012 and 2013. We
+      also visited the island of Tanna in 2013. </p>
+
+      <p>In 2014 we are visiting both Tanna and Espiritu Santo. Our visits take place
+      in early July for about 2 weeks. </p>
+
+      <div id="map_overview" class="map"></div>
+      <div id="map_detail" class="map"></div>
+      <div class="clear"></div>
+
+      <p>JTO provides the opportunity for professionals, students and others to
+      experience a life changing short term volunteer opportunity, while
+      improving the health and wellbeing of people with disabilities living in
+      impoverished circumstances.</p>
+
+      <p><a href="http://www.wheelchairsforkids.org">Wheelchairs for Kids</a> 
+      provide us with specially designed rough terrain
+      wheelchairs.  These and other therapy materials such as adult wheel
+      chairs, commodes, walkers etc must then be freighted in advance to our
+      location.  We are happy to receive donations of suitable equipment as
+      well as funds to pay for the cost of freight.</p>
+    </div>
+
+    <div class="footer"><p>Web design by Steven Cook</p></div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="slideshow.js"></script>
+
+  </body>
+</html>
